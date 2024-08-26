@@ -1,0 +1,22 @@
+Algorithmic Options
+
+1. Brute Force
+    The brute force solution to this solution is simple, yet wildly inefficient.
+    Since each person is able to request any other person, potentially creating
+    (similar to) a complete graph, leaves the order of growth to this problem
+    of a factorial nature. Each room can potentially contain any combination of
+    people leaving the possible combinations. For example, in a group with
+    only 20 kids divided into 5 rooms of 4, the combinations exceed 2e16. In a
+    program with 50 people splitting into 5 groups of 10, the combinations
+    exceed 1.67e+57.
+
+2. Gale Shapley / Residency Matching
+    At first glance this problem seems similar to residency matching in that they
+    both require matching groups based on requests. However, the algorithmic property
+    essential to the functionality of Gale-Shapley is its bipartite nature. By
+    exploiting this property, the algorithm efficiently iterates through potential
+    matches.
+    Unfortunately, the roommate pairing algorithm is not bipartite in nature. Each
+    person is able to request any other.
+
+
